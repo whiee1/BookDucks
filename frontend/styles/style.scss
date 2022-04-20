@@ -1,0 +1,246 @@
+body {
+  margin: 0 50px 30px 50px;
+  // background-color:rgb(43, 79, 92) ;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+header{
+  position: relative;
+  left: -50px;
+  
+  width: 98.25vw;
+  height: 130px;
+  background-color: rgb(28, 116, 133);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topHeading{
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: -2px 5px 11px #302e2e;
+  margin: 0;
+}
+
+
+
+
+.uploadContainer,
+.public{
+  
+ border-radius: 5px;
+ box-shadow: rgba(0, 0, 0, 0.538) -1px 2px 6px 0px;
+
+ }
+
+.public{
+  
+  padding-top: 20px;
+
+  h3{
+    font-size: 25px;
+    margin: 0;
+  }
+
+}
+
+h3{
+  padding: 30px;
+  color: rgb(22, 110, 128);
+
+}
+h2{
+ color:rgb(196, 224, 230); ;
+}
+
+.welcome{
+  color: rgb(28, 116, 133);
+}
+
+
+.books-container,
+.audios-container,
+.usersBooks,
+.usersAudio{
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+.profile{
+  background-color: rgba(255, 255, 255, 0.626);
+  border-radius: 5px;
+  margin: 40px 0;
+  box-shadow: rgba(0, 0, 0, 0.538) -1px 2px 6px 0px;
+  display: flex;
+  
+
+  h3{
+    margin: 0;
+  }
+
+  .profileInfo{
+    background-color: rgb(28, 116, 133);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    // backdrop-filter: blur(80px);
+    color: aliceblue;
+    display: flex;
+    width: auto;
+    align-items: stretch;
+
+
+    ul{
+      font-size: 16px;
+      padding: 0;
+      list-style: none;
+      margin-top: 40px;
+       
+      li{
+         width: 200px;
+         display: block;
+         padding: 10px 15px;
+         color: aliceblue;
+       }
+
+    }
+  }
+
+}
+
+
+.card {
+  
+  margin:10px;
+    background-color: rgba(255, 255, 255, 0.738);
+  width: 120px;
+  height: auto;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.538) -1px 2px 6px 0px;
+  
+  >*:not(img){
+    margin: 0 10px;
+  }
+    
+  img{
+    max-width: 100%;
+    max-height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+ 
+
+ 
+}
+
+
+
+.uploadBookContainer,
+.uploadAudioContainer,
+.login-container,
+.registration-container{
+  
+  border-radius: 5px;
+  margin: auto;
+  
+  border: none;
+  padding: 20px;
+}
+
+.login-container,
+.registration-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(28, 116, 133);
+  box-shadow: -1px 2px 6px 0px;
+  
+  input {
+    padding: 5px;
+   border-radius: 5px;
+   width: 250px;
+  }
+  
+}
+
+button{
+  height: 27px;
+  border-radius: 5px;
+  margin: 15px 0;
+  background-color:rgb(196, 224, 230); 
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.538) -1px 2px 6px 0px;
+  
+
+  &:focus{
+    box-shadow: inset -1px 2px 6px 0px;
+  }
+}
+
+
+.uploadContainer{
+  margin: auto;
+  padding: 20px;
+  h2{
+    color: rgb(22, 110, 128);
+   }
+
+ select,
+ input
+ {
+   padding: 5px;
+   border-radius: 5px;
+   
+ 
+ }
+
+ .uploadBookContainer,
+ .uploadAudioContainer{
+   margin: auto;
+   width: 200px;
+   
+
+ }
+
+   .uploadBookContainer >*,
+   .uploadAudioContainer >* {
+    
+     
+    margin: auto;
+   
+
+   label{
+    display: block;
+   }
+   input{
+     width: 250px;
+     padding: 5px;
+   }
+  
+ 
+   #bookCover{
+     margin: auto;
+   }
+   .uploadBook,
+   .uploadAudio{
+     position: relative;
+     margin: 20px 0 40px 50px;
+    padding: 5px;
+  }
+}}
+
+
+
+
+.hidden {
+  display: none;
+}
+
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://kit.fontawesome.com/2919d5e12c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+ 
+  <header>
+    <h1 class="topHeading">BookDucks</h1>
+  </header>
+
+  <div class="buttons hidden">
+    <button onclick="showAllProducts()" class="homeBtn hidden">All products</button>
+    <button onclick="profilePage()" class="profileBtn ">Profile page</button>
+    <button onclick="uploadPage()" class="content">New upload</button>
+    <button class="signOut">Sign out</button>
+  </div>
+
+  <div class="publicBtns">
+    <button class="toLogin">Login</button>
+    <button class="toNewUser">New User</button>
+  </div>
+
+
+  <div class="login-container hidden">
+    <h2>Login</h2>
+    <label for="username">Username/Email</label>
+    <input type="text" id="username"> <br>
+    <label for="password">Password</label>
+    <input type="password" id="password"> <br>
+    <button class="login">Login</button>
+    
+  </div>
+
+  <div class="registration-container hidden">
+    <h2>Register</h2>
+    <label for="newUsername">Username</label>
+    <input type="text" id="newUsername"> <br>
+    <label for="newEmail">Email</label>
+    <input type="text" id="newEmail"> <br>
+    <label for="newPassword">Password</label>
+    <input type="password" id="newPassword"> <br>
+    <button class="register">Register</button>
+    
+
+  </div>
+
+
+  <main class="main">
+    
+  
+   <div class="public">
+     <h3>Books</h3>
+      <section class="books-container">
+         
+      </section>
+      <h3>Audiobooks</h3>
+      <section class="audios-container">
+        
+      </section>
+    </div>
+ 
+    
+  
+
+  <article class="profile hidden">
+  
+    <aside class="profileInfo">
+     
+    </aside>
+
+    <div class="usersContent">
+      <h3>Your Books</h3> 
+      <section class="usersBooks">
+              
+      </section>
+      <h3>Your Audiobooks</h3> 
+    <section class="usersAudio">
+     
+      </section>
+    </div>
+
+   
+     
+  </article>
+  
+  <article  class="uploadContainer hidden">
+    <h2 class="upload">Upload new content</h2>
+
+    <label for="uploadType">What do you want to upload?</label>
+    <select name="uploadType" id="uploadType">
+      <option value="null" disabled selected>Choose type of upload</option>
+      <option value="uploadBook">Book</option>
+      <option value="uploadAudio" id="uploadAudio">Audiobook</option>
+    </select>
+
+
+    <section class="uploadBookContainer hidden">
+      <h2>Books</h2>
+      <label for="bookTitle">Title:
+      <input type="text" id="bookTitle"></label>
+      <label for="author">Author:
+      <input type="text" id="author"></label>
+      <label for="pages">Pages:
+      <input type="number" id="pages"></label>
+      <label for="bookGrade">Grade 1-5:
+      <input type="number" id="bookGrade" min="1" max="5"></label>
+      
+      <label for="bookGenre" >Genre:</label>
+    <select name="bookGenre" id="bookGenre">
+      <option value="null" disabled selected>Choose genre</option>
+      <option value="1">Romance</option>
+      <option value="2" >Crime</option>
+      <option value="3" >Fantasy</option>
+    </select>
+    <br>
+    <label id="bookCoverId" for="bookCover">Cover image:  </label>
+    <input type="file" name="bookCover" id="bookCover">
+    <br><br>
+      <button class="uploadBook" onclick="bookUpload()">Upload</button>
+    </section>
+    
+
+    <section class="uploadAudioContainer hidden">
+      <h2>Audio</h2>
+      <label for="audioTitle">Title:
+      <input type="text" id="audioTitle"></label>
+
+      <label for="audioAuthor">Author:
+      <input type="text" id="audioAuthor"></label>
+      <label for="release">Release:
+      <input type="date" id="release"></label>
+      <label for="length">Length:
+      <input type="number" id="length"></label>
+      <label for="audioGrade">Grade 1-5:
+      <input type="number" id="audioGrade" min="1" max="5"></label>
+      <label for="audioGenre" >Genre:</label>
+      <select name="audioGenre" id="audioGenre">
+        <option value="null" disabled selected>Choose genre</option>
+        <option value="1">Romance</option>
+        <option value="2" >Crime</option>
+        <option value="3" >Fantasy</option>
+      </select><br>
+      <label for="audioCover">Cover image:</label>
+      <input type="file" name="audioCover" id="audioCover"><br><br>
+      <button class="uploadAudio" onclick="audioUpload()">Upload</button>
+    </section>
+
+
+
+  </article>
+
+
+
+
+</main>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
